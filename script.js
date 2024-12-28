@@ -17,11 +17,23 @@ class myFruits{
 get(index){
     return this.data[index]
 } 
+
+// pop method
+pop(){
+    const lastItem = this.data[this.length -1]
+    delete this.data[this.length -1]
+    this.length--
+    return lastItem
+ 
+}
 }
 
 const myList = new myFruits();
 myList.push("Apple");
 myList.push("banana");
 myList.push("mango"); 
+myList.pop()
+myList.pop()
 // get method 
-console.log(myList.get(1));
+console.log(myList);
+
